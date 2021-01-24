@@ -64,4 +64,4 @@ Similar to scores by school spending, the total students does not change since t
 
 ## Summary
 
-Overall, changes to the data was minute but most reflective in the stages where nineth grader `NaN` data was used. Once exclusions were applied, the changes were miniscule but when applied to zero decimal places, were not visible.
+Overall, changes to the data was minute but most reflective in the stages where nineth grader `NaN` data was used. Once exclusions were applied, the changes were miniscule but when applied to zero decimal places, were not visible. The biggest change visible when switching to `NaN` data was in the immediate school summary before correcting the scores to produce a finalized `per_school_summary_df`. 
