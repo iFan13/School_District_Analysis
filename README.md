@@ -26,7 +26,7 @@ District without Thomas High School's 9th graders:
 
 #### How is the school summary affected?
 
-The school summary is only affected in the data row for Thomas High School. Other school data remains the same. 
+The school summary is only affected in the data row for Thomas High School. Other school data remains the same. Thomas High School does not change ranks and remains at the number two spot for high performing schools.
 
 #### How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
 
