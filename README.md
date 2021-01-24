@@ -13,47 +13,55 @@ The purpose of this analysis is to clean the [student data](/resources/students_
 
 ## Results
 
-How is the district summary affected?
-How is the school summary affected?
-How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
-How does replacing the ninth-grade scores affect the following:
-Math and reading scores by grade
-Scores by school spending
-Scores by school size
-Scores by school type
+#### How is the district summary affected?
+The district summary is minimally affected but does decrease the passing percentages by a very minute amount.
+
+District with Thomas High School's 9th graders:
+
+![District_w_THSGr9](/resources/District_w_THSGr9.PNG)
+
+District without Thomas High School's 9th graders:
+
+![District_wo_THSGr9](/resources/District_wo_THSGr9.PNG)
+
+#### How is the school summary affected?
+
+The school summary is only affected in the data row for Thomas High School. Other school data remains the same. 
+
+#### How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
+
+Replacing the ninth graders' reading and math scores by `numpy.nan` causes Thomas High School's % passing math, % passing reading and % overall passing to all drop by a significant margin.
+
+Non-replaced
+![NonReplacedSchoolSummary](/resources/NonReplacedSchoolSummary.PNG)
+
+Replaced
+![ReplacedSchoolSummary](/resources/ReplacedSchoolSummary.PNG)
+
+#### How does replacing the ninth-grade scores affect the following:
+
+##### Scores by Grade
+
+Replacing the ninth-grade scores affects the scores by grade in that the data frame will show `NaN` for Thomas High School.
+
+![NaNTHSGr9](/resources/NaNTHSGr9.PNG)
+
+##### Scores by school spending
+
+Scores by school spending is minisculy reflected by the manual update, however the remainder of the data (ie: `per_school_capita`) remains the same
+
+Per Capita Kept
+![PerCapitaKept](/resources/PerCapitaKept.PNG)
+
+Per Capita Removed
+![PerCapitaRemoved](/resources/PerCapitaRemoved.PNG)
+
+#### Scores by school size & type
+
+Similar to scores by school spending, the total students does not change since the 9th graders are not removed in their existence but the passing math, reading and overall pass is also updated with the manual update but the difference is not visible when applying a 0 decimal places format and still remains in the medium school size bin. Further more, Thomas High School is still a Charter high school and it's changes are small enough to similarly be invisible when applying the 0 decimal places formatting. 
+
+
 
 ## Summary
 
-Overview of the school district analysis: Explain the purpose of this analysis.
-
-Results: Using bulleted lists and images of DataFrames as support, address the following questions.
-
-How is the district summary affected?
-How is the school summary affected?
-How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
-How does replacing the ninth-grade scores affect the following:
-Math and reading scores by grade
-Scores by school spending
-Scores by school size
-Scores by school type
-Summary: Summarize four major changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs.
-
-Deliverable 3 Requirements
-Structure, Organization, and Formatting (7 points)
-The written analysis has the following structure, organization, and formatting:
-
-There is a title, and there are multiple sections (2 pt).
-Each section has a heading and subheading (3 pt).
-Links to images are working, and code is formatted and displayed correctly (2 pt).
-Analysis (18 points)
-The written analysis has the following:
-
-Overview of the school district analysis:
-
-The purpose of this analysis is well defined (3 pt).
-Results:
-
-There is a bulleted list that addresses how each of the seven school district metrics was affected by the changes in the data (10 pt).
-Summary:
-
-There is a statement summarizing four major changes to the school district analysis after reading and math scores have been replaced (5 pt).
+Overall, changes to the data was minute but most reflective in the stages where nineth grader `NaN` data was used. Once exclusions were applied, the changes were miniscule but when applied to zero decimal places, were not visible.
