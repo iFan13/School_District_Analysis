@@ -2,7 +2,7 @@
 
 ## Overview
 
-The purpose of this analysis is to clean the [student data](/resources/students_complete.csv) by removing Thomas High School 9th grade grades, then merge it with [school data](/resources/schools_complete.csv) to produce a completed set of school & student data. Then summaries and analyses are performed for the following breakdowns: 
+The purpose of this analysis is to clean the [student data](/Resources/students_complete.csv) by removing Thomas High School 9th grade grades, then merge it with [school data](/Resources/schools_complete.csv) to produce a completed set of school & student data. Then summaries and analyses are performed for the following breakdowns: 
 * an overall breakdown of the district
 * a summary by school (presented as both inclusive and exclusive of Thomas High 9th graders)
 * High and Low performing schools
@@ -18,11 +18,11 @@ The district summary is minimally affected but does decrease the passing percent
 
 District with Thomas High School's 9th graders:
 
-![District_w_THSGr9](/resources/District_w_THSGr9.PNG)
+![District_w_THSGr9](/Resources/District_w_THSGr9.PNG)
 
 District without Thomas High School's 9th graders:
 
-![District_wo_THSGr9](/resources/District_wo_THSGr9.PNG)
+![District_wo_THSGr9](/Resources/District_wo_THSGr9.PNG)
 
 #### How is the school summary affected?
 
@@ -33,10 +33,10 @@ The school summary is only affected in the data row for Thomas High School. Othe
 Replacing the ninth graders' reading and math scores by `numpy.nan` causes Thomas High School's % passing math, % passing reading and % overall passing to all drop by a significant margin.
 
 Non-replaced
-![NonReplacedSchoolSummary](/resources/NonReplacedSchoolSummary.PNG)
+![NonReplacedSchoolSummary](/Resources/NonReplacedSchoolSummary.PNG)
 
 Replaced
-![ReplacedSchoolSummary](/resources/ReplacedSchoolSummary.PNG)
+![ReplacedSchoolSummary](/Resources/ReplacedSchoolSummary.PNG)
 
 #### How does replacing the ninth-grade scores affect the following:
 
@@ -44,17 +44,17 @@ Replaced
 
 Replacing the ninth-grade scores affects the scores by grade in that the data frame will show `NaN` for Thomas High School.
 
-![NaNTHSGr9](/resources/NaNTHSGr9.PNG)
+![NaNTHSGr9](/Resources/NaNTHSGr9.PNG)
 
 ##### Scores by school spending
 
 Scores by school spending is minisculy reflected by the manual update, however the remainder of the data (ie: `per_school_capita`) remains the same
 
 Per Capita Kept
-![PerCapitaKept](/resources/PerCapitaKept.PNG)
+![PerCapitaKept](/Resources/PerCapitaKept.PNG)
 
 Per Capita Removed
-![PerCapitaRemoved](/resources/PerCapitaRemoved.PNG)
+![PerCapitaRemoved](/Resources/PerCapitaRemoved.PNG)
 
 #### Scores by school size & type
 
